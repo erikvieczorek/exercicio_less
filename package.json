@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "-": "^0.0.1",
+    "g": "^2.0.1"
+  },
+  "devDependencies": {
+    "less": "^4.2.0",
+    "less-watch-compiler": "^1.16.3"
+  },
+  "name": "exercicio_less",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "less": "less-watch-compiler ./src/styles ./build/styles main.less",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
