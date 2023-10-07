@@ -1,0 +1,30 @@
+@import "MediaQueries.less";
+
+
+.products-item {
+    flex: 100%;
+    max-width: 100%;
+
+        @media (min-width: @breakpoint-md) {
+            flex: 0 0 33%;
+            max-width: 33%;        
+        }
+
+        @media (min-width: @breakpoint-lg) {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+}
+
+
+.carousel-item img {
+    @media (min-width: @breakpoint-xs) {
+        height: 280px;
+    }
+}

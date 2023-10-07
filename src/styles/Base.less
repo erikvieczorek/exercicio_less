@@ -1,7 +1,7 @@
 
-@import "mapas.less";
-
-@breakpointMobile: ~"(max-width: 767px)";
+@import "variables.less";
+@import "mixins.less";
+@import "layout.less";
 
 body {
     font-family: #fonts[fontPrimary];
@@ -16,15 +16,18 @@ header img {
 }
 
 #cabecalho .nav .nav-link.active {
-    background-color: #f7c809;
+    background-color: #colors[textColor2];
     color: #colors[colorPrimary];
 }
 
-#cabecalho .nav .nav-link,
+#cabecalho .nav .nav-link {
+    .link-styles();
+}
+
 .navbar-brand,
 .navbar-brand:hover,
 .nav-produtos .nav-link.active:hover {
-    color: #colors[backgroudLight];
+    .link-styles();
 }
 
 .navbar-toggler {
@@ -37,8 +40,12 @@ header img {
     color: #colors[colorSecondary];
 }
 
-#sobre-o-restaurante, #produtos {
+#sobre-a-loja, #produtos {
     background-color: #colors[backgroudLight];
+}
+
+#usos, #fale-conosco {
+    background-color: #colors[backgroudMid];
 }
 
 .text-colored {
@@ -49,14 +56,13 @@ header img {
     color: #colors[textColor2];
 }
 
-.nav-produtos .nav-link.active,
+.nav-link.active,
 #fale-conosco button {
-    background-color: #colors[colorSecondary];
-    color: #colors[textColor2];
+    .button-styles();
 }
 
-.nav-produtos .nav-link:hover {
-    color: #colors[colorSecondary];
+.nav-produtos {
+    .link-styles()
 }
 
 .social-links li {
@@ -77,10 +83,4 @@ label.error {
 #carousel img {
     width: 100%;
     height: 400px;
-}
-
-@media @breakpointMobile {
-    .carousel-item img {
-        height: 280px;
-    }
 }

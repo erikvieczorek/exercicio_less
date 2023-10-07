@@ -11,7 +11,7 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "less": "less-watch-compiler ./src/styles ./build/styles main.less",
+    "less": "less-watch-compiler ./src/styles ./build/styles Base.less",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
